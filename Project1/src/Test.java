@@ -1,4 +1,7 @@
-import leetcode.Solution45;
+import Viagogo.FindHoleInSortedArray;
+import leetcode.ListNode;
+
+import java.util.*;
 
 /**
  *　　　　　　　　┏┓　　　┏┓+ +
@@ -25,9 +28,28 @@ import leetcode.Solution45;
 **/
 
 public class Test {
-    public static void main(String[] args) {
-        int[] test = {4,1,1,3,1,1,1};
-        Solution45 solution45 = new Solution45();
-        System.out.println(solution45.jump(test));
+
+    private class Location {
+        int num;
+
     }
+
+    public static void main(String[] args) {
+
+        int[] arr = {1,2,3,4,5,6,7};
+        int removedIdx = 6;
+
+        System.arraycopy(arr, removedIdx + 1, arr, removedIdx, arr.length - 1 - removedIdx);
+
+        for (Integer each : arr) {
+            System.out.println(each);
+        }
+
+
+
+    }
+
+
 }
+
+
